@@ -1,0 +1,7 @@
+Package: ${artifactId}
+Version: ${version}
+Section: misc
+Priority: low
+Architecture: all
+Description: IpService
+Maintainer: tcurdt@vafer.org
