@@ -1,5 +1,8 @@
 package org.zmartonos.services.IpService;
 
+import org.apache.log4j.PropertyConfigurator;
+import org.zmartonos.zlib.utils.Utils;
+
 /**
  * Hello world!
  *
@@ -9,6 +12,7 @@ public class App {
 	private Thread runner;
 	
 	public App(){
+		PropertyConfigurator.configure("/home/zootanka/jworkspace/IpService/src/main/resources/log4j.properties");
 	}
 	
 	private void createService(){
@@ -20,6 +24,12 @@ public class App {
 	public void startService(){
 		createService();
 		runner.start();
+	}
+	
+	public void stopService(){
+		service.stop();
+		while (service.hasStopped())
+			Utils.sleep(3000);
 	}
 	
     public static void main( String[] args )

@@ -1,9 +1,11 @@
 package org.zmartonos.services.IpService;
 
+import org.apache.log4j.Logger;
 import org.zmartonos.zlib.service.GenericService;
 import org.zmartonos.zlib.utils.Utils;
 
 public class IpService extends GenericService {
+	private Logger log= Logger.getLogger(IpService.class.getName());
 	/**
 	 * 
 	 */
@@ -17,6 +19,6 @@ public class IpService extends GenericService {
 	 */
 	public void work()throws Exception{
 		String publicIp= Utils.getPublicIp();
-		System.out.println("Public ip is: "+publicIp);
+		log.info("Public ip is: "+publicIp);
 	}
 }
