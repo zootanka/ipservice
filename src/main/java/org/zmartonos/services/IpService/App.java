@@ -12,7 +12,7 @@ public class App {
 	private Thread runner;
 	
 	public App(){
-		PropertyConfigurator.configure("/home/zootanka/jworkspace/IpService/src/main/resources/log4j.properties");
+		//PropertyConfigurator.configure("/home/zootanka/workspace/ipservice/src/main/resources/log4j.properties");
 	}
 	
 	private void createService(){
